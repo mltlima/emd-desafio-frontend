@@ -15,7 +15,7 @@ function ScrollyTelling() {
             scrollTrigger: {
                 trigger: '.map-container',
                 start: "top top",
-                end: "bottom center",
+                end: "50% center",
                 scrub: true,
                 pin: true // prevents the map from scrolling away immediately
             },
