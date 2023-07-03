@@ -7,10 +7,15 @@ extend({ GLTFLoader });
 
 const ModelContent = () => {
   const gltf = useLoader(GLTFLoader, '/cristo.gltf');
+  let xRotation = 0;
+  let yRotation = -90 * Math.PI / 180;
+  let zRotation = 0;
 
   // Adjust the scale and position here
   gltf.scene.scale.set(0.1, 0.1, 0.1); // scale down by 1%
-  gltf.scene.position.set(0, -1, 0); // slightly move the model down
+  gltf.scene.position.set(0, -1, 1); // slightly move the model down
+  // To rotate the model
+  gltf.scene.rotation.set(xRotation, yRotation, zRotation);
 
   return (
     <primitive object={gltf.scene} />
