@@ -22,7 +22,7 @@ function ScrollyTelling() {
             opacity: 0
         });
 
-        gsap.from('.model-canvas', {
+        gsap.from('.model-container', {
             scrollTrigger: {
                 trigger: '.map-container',
                 start: "bottom center",
@@ -38,6 +38,7 @@ function ScrollyTelling() {
         <div ref={sectionRef} style={{ height: '300vh' }}>
             <Map />
             <Model />
+            <div style={{ height: '500vh' }} />
         </div>
     );
 }
