@@ -33,12 +33,11 @@ function ScrollyTelling() {
         });
     }, []);
 
-
     return (
         <div ref={sectionRef} style={{ height: '300vh' }}>
             <Map />
             <Model />
-            <div style={{ height: '500vh' }} />
+            <div className='body-height' style={{ height: '1000vh' }} /> {/*lenght to scroll*/}
         </div>
     );
 }

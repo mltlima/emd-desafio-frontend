@@ -16,3 +16,16 @@
     color: #fff;
     font-size: 1.5em;
 }
+
+.text-wrapper {
+    width: 70%;
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    position: absolute;
+}
+
+.head-text {
+    right: 20%;
+    top: 50%;
+}
