@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/emd-desafio-frontend/static/css/main.0152f6a5.css",
-    "main.js": "/emd-desafio-frontend/static/js/main.19d7816b.js",
+    "main.js": "/emd-desafio-frontend/static/js/main.aa56b587.js",
     "index.html": "/emd-desafio-frontend/index.html",
     "main.0152f6a5.css.map": "/emd-desafio-frontend/static/css/main.0152f6a5.css.map",
-    "main.19d7816b.js.map": "/emd-desafio-frontend/static/js/main.19d7816b.js.map"
+    "main.aa56b587.js.map": "/emd-desafio-frontend/static/js/main.aa56b587.js.map"
   },
   "entrypoints": [
     "static/css/main.0152f6a5.css",
-    "static/js/main.19d7816b.js"
+    "static/js/main.aa56b587.js"
   ]
 }
