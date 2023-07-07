@@ -95,8 +95,8 @@ const ModelContent = () => {
     gsap.from('.head-text', {
       scrollTrigger: {
         trigger: '.body-height',
-        start: 2000, // Adjust this to set when the text should start scrolling
-        end: 2500, // Adjust this to set how long the text should stay
+        start: 2000,
+        end: 2500,
         scrub: true,
       },
       opacity: 0,
@@ -104,8 +104,8 @@ const ModelContent = () => {
     gsap.to('.head-text', {
       scrollTrigger: {
         trigger: '.body-height',
-        start: 2500, // Adjust this to set when the text should start scrolling
-        end: 2800, // Adjust this to set how long the text should stay
+        start: 2500,
+        end: 2800,
         scrub: true,
       },
       opacity: 0,
@@ -152,8 +152,8 @@ const ModelContent = () => {
     gsap.from('.torso-text', {
       scrollTrigger: {
         trigger: '.body-height',
-        start: 3100, // Adjust this to set when the text should start scrolling
-        end: 3500, // Adjust this to set how long the text should stay
+        start: 3100,
+        end: 3500,
         scrub: true,
       },
       opacity: 0,
@@ -161,8 +161,8 @@ const ModelContent = () => {
     gsap.to('.torso-text', {
       scrollTrigger: {
         trigger: '.body-height',
-        start: 3500, // Adjust this to set when the text should start scrolling
-        end: 3700, // Adjust this to set how long the text should stay
+        start: 3500,
+        end: 3700,
         scrub: true,
       },
       opacity: 0,
@@ -209,8 +209,8 @@ const ModelContent = () => {
     gsap.from('.arms-text', {
       scrollTrigger: {
         trigger: '.body-height',
-        start: 4000, // Adjust this to set when the text should start scrolling
-        end: 4500, // Adjust this to set how long the text should stay
+        start: 4000,
+        end: 4500,
         scrub: true,
       },
       opacity: 0,
@@ -218,8 +218,8 @@ const ModelContent = () => {
     gsap.to('.arms-text', {
       scrollTrigger: {
         trigger: '.body-height',
-        start: 4600, // Adjust this to set when the text should start scrolling
-        end: 4600, // Adjust this to set how long the text should stay
+        start: 4600,
+        end: 4600,
         scrub: true,
       },
       opacity: 0,
@@ -266,8 +266,8 @@ const ModelContent = () => {
     gsap.from('.legs-text', {
       scrollTrigger: {
         trigger: '.body-height',
-        start: 5100, // Adjust this to set when the text should start scrolling
-        end: 5300, // Adjust this to set how long the text should stay
+        start: 5100,
+        end: 5300,
         scrub: true,
       },
       opacity: 0,
@@ -275,8 +275,8 @@ const ModelContent = () => {
     gsap.to('.legs-text', {
       scrollTrigger: {
         trigger: '.body-height',
-        start: 5600, // Adjust this to set when the text should start scrolling
-        end: 5600, // Adjust this to set how long the text should stay
+        start: 5600,
+        end: 5600,
         scrub: true,
       },
       opacity: 0,
