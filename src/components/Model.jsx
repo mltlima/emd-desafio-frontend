@@ -27,47 +27,69 @@ const ModelContent = () => {
   useEffect(() => {
     gsap.to(gltf.scene.rotation, {
       scrollTrigger: {
-        trigger: ".map-container",
-        start: 429,
-        end: 1200,
-        scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        start: 700,
+        end: 1800,
+        scrub: 1,
       },
-      x: 0.1, // rotate the model 360 degrees around the y-axis
+      x: 0.1,
     });
 
     gsap.to(gltf.scene.scale, {
       scrollTrigger: {
-        trigger: '.map-container',
-        start: 429,
-        end: 1200,
+        start: 700,
+        end: 1800,
         scrub: 1,
       },
-      x: 0.1, // target scale values
+      x: 0.1,
       y: 0.1,
       z: 0.1,
-      ease: "none", // linear movement
+      ease: "none",
     });
 
     gsap.to('.title-text', {
       scrollTrigger: {
         trigger: '.body-height',
-        start: 1200, // Adjust this to set when the text should start scrolling
-        end: 2000, // Adjust this to set how long the text should scroll for
+        start: 1200,
+        end: 1800,
         scrub: true,
       },
       opacity: 0,
     });
 
+    //start of head focus animation
     gsap.to(gltf.scene.scale, {
+      immediateRender: false,
       scrollTrigger: {
-        start: 1201, // Change this to match the end position of the first animation
-        end: 2000, // And adjust this accordingly
+        start: 1800,
+        end: 2200,
         scrub: 1,
       },
-      x: 0.2, // target scale values
-      y: 0.2,
-      z: 0.2,
-      ease: "none", // linear movement
+      x: 0.6,
+      y: 0.6,
+      z: 0.6,
+      ease: "none",
+    });
+
+    gsap.to(camera.position, {
+      scrollTrigger: {
+        start: 1800,
+        end: 2200,
+        scrub: 1,
+      },
+      y: 20,
+      x: 2,
+      ease: "none",
+    });
+
+    gsap.to(gltf.scene.rotation, {
+      immediateRender: false,
+      scrollTrigger: {
+        start: 1800,
+        end: 2200,
+        scrub: 1,
+      },
+      x: 0.2,
+      z: 0.5,
     });
 
     gsap.from('.head-text', {
@@ -79,7 +101,226 @@ const ModelContent = () => {
       },
       opacity: 0,
     });
-  }, [gltf.scene.rotation, gltf.scene.scale]);
+    gsap.to('.head-text', {
+      scrollTrigger: {
+        trigger: '.body-height',
+        start: 2500, // Adjust this to set when the text should start scrolling
+        end: 2800, // Adjust this to set how long the text should stay
+        scrub: true,
+      },
+      opacity: 0,
+    });
+
+    //start of torso focus animation
+    gsap.to(gltf.scene.rotation, {
+      immediateRender: false,
+      scrollTrigger: {
+        start: 2800,
+        end: 3200,
+        scrub: 1,
+      },
+      x: -0.2,
+      z: -0.5,
+    });
+
+    gsap.to(camera.position, {
+      immediateRender: false,
+      scrollTrigger: {
+        start: 2800,
+        end: 3200,
+        scrub: 1,
+      },
+      y: 3,
+      x: 3,
+      z: 5,
+      ease: "none",
+    });
+
+    gsap.to(gltf.scene.scale, {
+      immediateRender: false,
+      scrollTrigger: {
+        start: 2800,
+        end: 3200,
+        scrub: 1,
+      },
+      x: 0.2,
+      y: 0.2,
+      z: 0.2,
+      ease: "none",
+    });
+
+    gsap.from('.torso-text', {
+      scrollTrigger: {
+        trigger: '.body-height',
+        start: 3100, // Adjust this to set when the text should start scrolling
+        end: 3500, // Adjust this to set how long the text should stay
+        scrub: true,
+      },
+      opacity: 0,
+    });
+    gsap.to('.torso-text', {
+      scrollTrigger: {
+        trigger: '.body-height',
+        start: 3500, // Adjust this to set when the text should start scrolling
+        end: 3700, // Adjust this to set how long the text should stay
+        scrub: true,
+      },
+      opacity: 0,
+    });
+
+    //start of arms focus animation
+    gsap.to(gltf.scene.rotation, {
+      immediateRender: false,
+      scrollTrigger: {
+        start: 3700,
+        end: 4100,
+        scrub: 1,
+      },
+      x: 0,
+      z: 0,
+    });
+
+    gsap.to(camera.position, {
+      immediateRender: false,
+      scrollTrigger: {
+        start: 3700,
+        end: 4100,
+        scrub: 1,
+      },
+      y: 12,
+      x: 7,
+      z: 5,
+      ease: "none",
+    });
+
+    gsap.to(gltf.scene.scale, {
+      immediateRender: false,
+      scrollTrigger: {
+        start: 3700,
+        end: 4100,
+        scrub: 1,
+      },
+      x: 0.5,
+      y: 0.5,
+      z: 0.5,
+      ease: "none",
+    });
+
+    gsap.from('.arms-text', {
+      scrollTrigger: {
+        trigger: '.body-height',
+        start: 4000, // Adjust this to set when the text should start scrolling
+        end: 4500, // Adjust this to set how long the text should stay
+        scrub: true,
+      },
+      opacity: 0,
+    });
+    gsap.to('.arms-text', {
+      scrollTrigger: {
+        trigger: '.body-height',
+        start: 4600, // Adjust this to set when the text should start scrolling
+        end: 4600, // Adjust this to set how long the text should stay
+        scrub: true,
+      },
+      opacity: 0,
+    });
+
+    //start of legs focus animation
+    gsap.to(gltf.scene.rotation, {
+      immediateRender: false,
+      scrollTrigger: {
+        start: 4700,
+        end: 5100,
+        scrub: 1,
+      },
+      x: 0,
+      z: 0,
+    });
+
+    gsap.to(camera.position, {
+      immediateRender: false,
+      scrollTrigger: {
+        start: 4700,
+        end: 5100,
+        scrub: 1,
+      },
+      y: 1,
+      x: 0,
+      z: 5,
+      ease: "none",
+    });
+
+    gsap.to(gltf.scene.scale, {
+      immediateRender: false,
+      scrollTrigger: {
+        start: 4700,
+        end: 5100,
+        scrub: 1,
+      },
+      x: 0.4,
+      y: 0.4,
+      z: 0.4,
+      ease: "none",
+    });
+
+    gsap.from('.legs-text', {
+      scrollTrigger: {
+        trigger: '.body-height',
+        start: 5100, // Adjust this to set when the text should start scrolling
+        end: 5300, // Adjust this to set how long the text should stay
+        scrub: true,
+      },
+      opacity: 0,
+    });
+    gsap.to('.legs-text', {
+      scrollTrigger: {
+        trigger: '.body-height',
+        start: 5600, // Adjust this to set when the text should start scrolling
+        end: 5600, // Adjust this to set how long the text should stay
+        scrub: true,
+      },
+      opacity: 0,
+    });
+
+    //final animation
+    gsap.to(gltf.scene.rotation, {
+      immediateRender: false,
+      scrollTrigger: {
+        start: 5700,
+        end: 6500,
+        scrub: 1,
+      },
+      x: 0.1,
+      z: 0,
+    });
+
+    gsap.to(camera.position, {
+      immediateRender: false,
+      scrollTrigger: {
+        start: 5700,
+        end: 6500,
+        scrub: 1,
+      },
+      y: 1,
+      x: 0,
+      z: 5,
+      ease: "none",
+    });
+
+    gsap.to(gltf.scene.scale, {
+      immediateRender: false,
+      scrollTrigger: {
+        start: 5700,
+        end: 6500,
+        scrub: 1,
+      },
+      x: 0.1,
+      y: 0.1,
+      z: 0.1,
+      ease: "none",
+    });
+
+  }, [gltf.scene.rotation, gltf.scene.scale, camera.position]);
 
   return (
     <group ref={group}>

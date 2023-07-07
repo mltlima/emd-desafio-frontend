@@ -24,8 +24,8 @@ function ScrollyTelling() {
 
         gsap.from('.model-container', {
             scrollTrigger: {
-                trigger: '.map-container',
-                start: "bottom center",
+                trigger: '.body-height',
+                start: "top top",
                 end: "bottom top",
                 scrub: true
             },

@@ -18,7 +18,7 @@
 }
 
 .text-wrapper {
-    width: 70%;
+    width: 60%;
     color: #fff;
     font-size: 1.5em;
     text-align: center;
@@ -26,6 +26,21 @@
 }
 
 .head-text {
-    right: 20%;
-    top: 50%;
+    right: 5%;
+    top: 10%;
+}
+
+.torso-text {
+    right: 3%;
+    bottom: 10%;
+}
+
+.arms-text {
+    right: 3%;
+    bottom: 10%;
+}
+
+.legs-text {
+    top: 68%;
+    left: 20%;
 }
